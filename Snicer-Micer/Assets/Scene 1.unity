@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicSource: {fileID: 1603469770}
   SFXSound: {fileID: 1143841249}
-  backround: {fileID: 0}
+  backround: {fileID: 8300000, guid: 7659dc63502f01d45b13f4af6b1de7d5, type: 3}
   Slice: {fileID: 8300000, guid: 0de12fa875d73b541bceaeb4cc2969d5, type: 3}
   FallingVeg: {fileID: 8300000, guid: 3c4dd545aec727441b24d4b67c46b67e, type: 3}
 --- !u!4 &1270131557

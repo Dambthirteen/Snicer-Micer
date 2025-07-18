@@ -10,4 +10,10 @@ public class SoundEffects : MonoBehaviour
     public AudioClip backround;
     public AudioClip Slice;
     public AudioClip FallingVeg;
+
+    void Start()
+    {
+        MusicSource.clip = backround;
+        MusicSource.Play();
+    }
 }
