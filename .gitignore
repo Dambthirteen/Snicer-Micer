@@ -68,8 +68,11 @@ Snicer-Micer/sysinfo.txt
 Snicer-Micer/crashlytics-build.properties
 
 # Packed Addressables
-Snicer-Micer//[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+Snicer-Micer/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
-Snicer-Micer//[Aa]ssets/[Ss]treamingAssets/aa.meta
-Snicer-Micer//[Aa]ssets/[Ss]treamingAssets/aa/*
+Snicer-Micer/[Aa]ssets/[Ss]treamingAssets/aa.meta
+Snicer-Micer/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+Snicer-Micer/echo .DS_Store >> ~/.gitignore_global
+Snicer-Micer/git config --global core.excludesfile ~/.gitignore_global
