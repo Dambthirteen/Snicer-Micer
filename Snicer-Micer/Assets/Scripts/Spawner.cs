@@ -5,6 +5,9 @@ public class Spawner : MonoBehaviour
     float timer = 1;
     public GameObject[] gm;
 
+    public float RandX1;
+    public float RandX2;
+
     void Start()
     {
         
@@ -20,7 +23,7 @@ public class Spawner : MonoBehaviour
         else
         {
             int chance = Random.Range(1, 101);
-            float pos_x = Random.Range(-10, 10);
+            float pos_x = Random.Range(RandX1, RandX2);
             float RandHeight = Random.Range(6, 10);
 
             if (chance < 32)
