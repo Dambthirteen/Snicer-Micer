@@ -2,15 +2,27 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class VegCollider : MonoBehaviour
 {
 
     public GameObject[] GmVeg;
 
+    //Counter Spawn & Destroy
     int CarrotCounter;
     int PotatoCounter;
     int AvocadoCounter;
+    
+    //Counter UI
+    int CarrotCounterMax;
+    int PotatoCounterMax;
+    int AvocadoCounterMax;
+    int TotalSliced;
+    [SerializeField] TextMeshProUGUI _ScoreCarrot;
+    [SerializeField] TextMeshProUGUI _ScorePotato;
+    [SerializeField] TextMeshProUGUI _ScoreAvocado;
+    [SerializeField] TextMeshProUGUI _TotalSliced;
 
     void Start()
     {
@@ -20,9 +32,11 @@ public class VegCollider : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(CarrotCounter);
-        Debug.Log(PotatoCounter);
-        Debug.Log(AvocadoCounter);
+        _ScoreCarrot.text = CarrotCounterMax.ToString();
+        _ScorePotato.text = PotatoCounterMax.ToString();
+        _ScoreAvocado.text = AvocadoCounterMax.ToString();
+        _TotalSliced.text = TotalSliced.ToString();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +67,7 @@ public class VegCollider : MonoBehaviour
             Destroy(other.gameObject);
 
             SpawnVegetables();
+            UICounter();
 
             CarrotCounter = 0;
             PotatoCounter = 0;
@@ -93,6 +108,14 @@ public class VegCollider : MonoBehaviour
             Instantiate(GmVeg[2], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
         }
 
+    }
+
+    private void UICounter()
+    {
+        CarrotCounterMax += CarrotCounter;
+        PotatoCounterMax += PotatoCounter;
+        AvocadoCounterMax += AvocadoCounter;
+        TotalSliced += CarrotCounter + PotatoCounter + AvocadoCounter;
     }
 
 
