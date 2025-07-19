@@ -4,7 +4,8 @@ public class DespawnObjects : MonoBehaviour
 {
 
     public static int ObjectCount = 0;
-    public int MaxObjectsInSlicer = 10;
+    public int MaxObjectsInSlicer = 3;
+    public bool DestroyNow = false;
 
     void Start()
     {
@@ -14,24 +15,36 @@ public class DespawnObjects : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log(ObjectCount);
     }
 
     void OnTriggerEnter(Collider other)
     {
         ObjectCount++;
-        Debug.Log(ObjectCount);
         
 
-        if (ObjectCount >= MaxObjectsInSlicer)
+
+        if (ObjectCount >= MaxObjectsInSlicer && !DestroyNow)
         {
-            Destroy(other.gameObject);
-            ObjectCount = 0;
-            Debug.Log("ObjectsDestroyed");
+            DestroyNow = true;
         }
-
-        
     }
 
-    
+    void OnTriggerStay(Collider collider)
+    {
+        if (DestroyNow)
+        {
+            for (int i = 0; i < ObjectCount; i++)
+            {
+                Destroy(collider.gameObject);
+            }
+
+            ObjectCount = 0;
+            DestroyNow = false;
+        }
+    }
+
+
+
+
 }
