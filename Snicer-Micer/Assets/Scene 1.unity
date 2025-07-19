@@ -3808,6 +3808,9 @@ MonoBehaviour:
   _ScoreAvocado: {fileID: 1722328566}
   _TotalSliced: {fileID: 317506274}
   SliceKey: 32
+  _DestroyParticlesCarrot: {fileID: 706931464876470297, guid: 1b692cd0915ae504c8a616752158a9c8, type: 3}
+  _DestroyParticlesPotato: {fileID: 2905360647151561053, guid: 061a4fb2eabcf6340a8d9f65189020d4, type: 3}
+  _DestroyParticlesAvocado: {fileID: 4747732709134541802, guid: 077ccec899ad19a4a970702e92f9c0cf, type: 3}
 --- !u!82 &2059847149
 AudioSource:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class VegCollider : MonoBehaviour
     int AvocadoCounter;
     [SerializeField] float _DestroyTimeOffset;
     [SerializeField] float _FracturedSpawn = 0.2f;
-    
+
     //Counter UI
     int CarrotCounterMax;
     int PotatoCounterMax;
@@ -30,12 +30,17 @@ public class VegCollider : MonoBehaviour
     public KeyCode SliceKey = KeyCode.Space;
 
     //Sounds
-
     AudioSource _audioSource;
+
+    //Particles
+    [SerializeField] private ParticleSystem _DestroyParticlesCarrot;
+    [SerializeField] private ParticleSystem _DestroyParticlesPotato;
+    [SerializeField] private ParticleSystem _DestroyParticlesAvocado;
+    private ParticleSystem _DamageParticleSystem;
 
     void Awake()
     {
-        
+
     }
 
 
@@ -80,10 +85,22 @@ public class VegCollider : MonoBehaviour
     {
         if (Input.GetKey(SliceKey))
         {
+
+            if (other.gameObject.CompareTag("Carrot"))
+            {
+                _DamageParticleSystem = Instantiate(_DestroyParticlesCarrot, transform.position, Quaternion.identity);
+            }
+            if (other.gameObject.CompareTag("Potato"))
+            {
+                _DamageParticleSystem = Instantiate(_DestroyParticlesPotato, transform.position, Quaternion.identity);
+            }
+            if (other.gameObject.CompareTag("Avocado"))
+            {
+                _DamageParticleSystem = Instantiate(_DestroyParticlesAvocado, transform.position, Quaternion.identity);
+            }
             
-
             Destroy(other.gameObject, _DestroyTimeOffset);
-
+            
             SpawnVegetables();
             UICounter();
 
@@ -143,7 +160,21 @@ public class VegCollider : MonoBehaviour
         TotalSliced += CarrotCounter + PotatoCounter + AvocadoCounter;
     }
 
-
+    private void SpawnDestroyParticles()
+    {
+        if (tag == "Carrot")
+        {
+            _DamageParticleSystem = Instantiate(_DestroyParticlesCarrot, transform.position, Quaternion.identity);
+        }
+        if (tag == "Potato")
+        {
+            _DamageParticleSystem = Instantiate(_DestroyParticlesPotato, transform.position, Quaternion.identity);
+        }
+        if (tag == "Carrot")
+        {
+            _DamageParticleSystem = Instantiate(_DestroyParticlesAvocado, transform.position, Quaternion.identity);
+        }
+    }      
 
 
 }
