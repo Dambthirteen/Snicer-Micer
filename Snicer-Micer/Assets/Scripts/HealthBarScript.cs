@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class HealthBarScript : MonoBehaviour
 {
     DestroyFalling _dsfalling;
-    public float maxHealth;
-    public float currenHealth;
+    
 
     [SerializeField] Image _healthBarSprite;
 
 
     void Start()
     {
-        currenHealth = maxHealth;
+        
     }
 
 
@@ -24,9 +23,8 @@ public class HealthBarScript : MonoBehaviour
         
     }
 
-    public void UpdateHealthbar(float maxHealth, float currenHealth)
+    public void UpdateHealthbar(float _maxHealth, float _currentHealth)
     {
-        currenHealth = _dsfalling.CountLostVeg;
-        _healthBarSprite.fillAmount = currenHealth / maxHealth;
+        _healthBarSprite.fillAmount = _currentHealth / _maxHealth;
     }
 }
