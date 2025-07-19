@@ -24,10 +24,11 @@ public class SlicerMovement : MonoBehaviour
 
     void Update()
     {
-        PreviousPosition = transform.position;
         InputManager();
         MoveSound();
+       
     }
+
 
     public void InputManager()
     {
@@ -37,9 +38,10 @@ public class SlicerMovement : MonoBehaviour
 
     public void MoveSound()
     {
-        if (transform.position != PreviousPosition)
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
             _AudioSource.Play();
         }
     }
+
 }
