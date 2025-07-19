@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8849231258568304745}
-  - component: {fileID: 1568272395961380424}
   - component: {fileID: 7805279061660592752}
   - component: {fileID: 6531116225693773032}
   - component: {fileID: 8658453960776758815}
+  - component: {fileID: 6450965752962625400}
   m_Layer: 8
   m_Name: Avocado
   m_TagString: Avocado
@@ -30,19 +30,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.96, y: 2.4374003, z: 0}
-  m_LocalScale: {x: 1, y: 0.44176203, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1568272395961380424
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011148336654463326}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &7805279061660592752
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3b69d7db55f746449ce6837a66fe5f4, type: 2}
+  - {fileID: 2100000, guid: e18018e0e344f7443bfdc16296b1128d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,10 +99,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.5310595
+  m_Height: 1.4698743
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: -0.12145758, y: 0.059603512, z: -0.005121708}
 --- !u!54 &8658453960776758815
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,3 +130,11 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 8
   m_CollisionDetection: 1
+--- !u!33 &6450965752962625400
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011148336654463326}
+  m_Mesh: {fileID: -830171768015006411, guid: 034774a0f60f1a84bb707600b9202d0e, type: 3}
