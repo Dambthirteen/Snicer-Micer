@@ -141,11 +141,11 @@ public class VegCollider : MonoBehaviour
         }
         for (int i = 0; i < CarrotCounter; i++)
         {
-            Instantiate(GmVeg[1], new Vector3(transform.position.x, -0.5f, transform.position.z), quaternion.identity);
+            Instantiate(GmVeg[1], new Vector3(transform.position.x, _FracturedSpawn, transform.position.z), quaternion.identity);
         }
         for (int i = 0; i < AvocadoCounter; i++)
         {
-            Instantiate(GmVeg[2], new Vector3(transform.position.x, -0.5f, transform.position.z), quaternion.identity);
+            Instantiate(GmVeg[2], new Vector3(transform.position.x, _FracturedSpawn, transform.position.z), quaternion.identity);
         }
 
         Invoke(nameof(PlaySoundFalling), 0.3f);
