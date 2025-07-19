@@ -30,7 +30,7 @@ public class Spawner : MonoBehaviour
         {
             int chance = Random.Range(1, 101);
             float pos_x = Random.Range(RandX1, RandX2);
-            float RandHeight = Random.Range(6, 10);
+            float RandHeight = Random.Range(8, 12);
 
             if (chance < 32)
             {
