@@ -10,7 +10,9 @@ public class SlicerMovement : MonoBehaviour
     [SerializeField] GameObject Slicer;
     public float _MovementSpeed;
     Vector3 HorizontalMovement;
-    
+
+    public AudioSource _AudioSource;
+
 
     void Start()
     {
@@ -22,12 +24,20 @@ public class SlicerMovement : MonoBehaviour
     void Update()
     {
         InputManager();
+        MoveSound();
     }
 
     public void InputManager()
     {
         HorizontalMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
         transform.Translate(HorizontalMovement * _MovementSpeed * Time.deltaTime);
-        
+    }
+
+    public void MoveSound()
+    {
+        if (transform.position != HorizontalMovement)
+        {
+            _AudioSource.Play();
+        }
     }
 }
