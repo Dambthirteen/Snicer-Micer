@@ -28,9 +28,19 @@ public class VegCollider : MonoBehaviour
     //Keys
     public KeyCode SliceKey = KeyCode.Space;
 
+    //Sounds
+
+    AudioSource _audioSource;
+
+    void Awake()
+    {
+        
+    }
+
+
     void Start()
     {
-
+        _audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -67,8 +77,10 @@ public class VegCollider : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(SliceKey))
+        if (Input.GetKey(SliceKey))
         {
+            
+
             Destroy(other.gameObject);
 
             SpawnVegetables();
@@ -98,6 +110,11 @@ public class VegCollider : MonoBehaviour
         }
     }
 
+    private void PlaySoundFalling()
+    {
+        _audioSource.Play();
+    }
+
     private void SpawnVegetables()
     {
         for (int i = 0; i < PotatoCounter; i++)
@@ -112,6 +129,8 @@ public class VegCollider : MonoBehaviour
         {
             Instantiate(GmVeg[2], new Vector3(transform.position.x, -0.5f, transform.position.z), quaternion.identity);
         }
+
+        Invoke(nameof(PlaySoundFalling), 0.3f);
 
     }
 
