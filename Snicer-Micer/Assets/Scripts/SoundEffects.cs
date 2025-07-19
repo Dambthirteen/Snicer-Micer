@@ -29,6 +29,7 @@ public class SoundEffects : MonoBehaviour
 
     void Update()
     {
+        SFXSound.pitch = Random.Range(0.9f, 1.1f);
         if (Input.GetKey(KeyCode.Space))
         {
             Invoke(nameof(PlaySlice), 0.1f);
