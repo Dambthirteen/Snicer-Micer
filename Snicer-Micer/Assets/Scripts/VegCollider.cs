@@ -13,6 +13,7 @@ public class VegCollider : MonoBehaviour
     int CarrotCounter;
     int PotatoCounter;
     int AvocadoCounter;
+    [SerializeField] float _FracturedSpawn = 0.2f;
     
     //Counter UI
     int CarrotCounterMax;
@@ -101,15 +102,15 @@ public class VegCollider : MonoBehaviour
     {
         for (int i = 0; i < PotatoCounter; i++)
         {
-            Instantiate(GmVeg[0], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
+            Instantiate(GmVeg[0], new Vector3(transform.position.x, _FracturedSpawn, transform.position.z), quaternion.identity);
         }
         for (int i = 0; i < CarrotCounter; i++)
         {
-            Instantiate(GmVeg[1], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
+            Instantiate(GmVeg[1], new Vector3(transform.position.x, -0.5f, transform.position.z), quaternion.identity);
         }
         for (int i = 0; i < AvocadoCounter; i++)
         {
-            Instantiate(GmVeg[2], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
+            Instantiate(GmVeg[2], new Vector3(transform.position.x, -0.5f, transform.position.z), quaternion.identity);
         }
 
     }
