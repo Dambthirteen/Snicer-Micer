@@ -14,6 +14,7 @@ public class DestroyFalling : MonoBehaviour
     [SerializeField] private HealthBarScript _hbscript;
 
     public GameManager _gamemanager;
+    public AudioSource _audiosource;
 
 
     void Start()
@@ -44,8 +45,8 @@ public class DestroyFalling : MonoBehaviour
         _hbscript.UpdateHealthbar(_maxHealth, _currentHealth);
 
 
-
-
+        _audiosource.pitch = Random.Range(1f, 1.5f);
+        _audiosource.Play();
         Destroy(other.gameObject);
     }
 
