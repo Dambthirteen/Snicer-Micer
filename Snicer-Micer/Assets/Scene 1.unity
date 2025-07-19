@@ -2451,6 +2451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CountLostVeg: 0
+  CountLostVegTotal: 0
   _maxHealth: 10
   _currentHealth: 0
   _hbscript: {fileID: 972248502}

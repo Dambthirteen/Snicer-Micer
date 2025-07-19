@@ -4,6 +4,7 @@ public class DestroyFalling : MonoBehaviour
 {
 
     public int CountLostVeg;
+    public int CountLostVegTotal;
     public int _maxHealth = 10;
     public int _currentHealth;
 
@@ -28,8 +29,9 @@ public class DestroyFalling : MonoBehaviour
     public void OnCollisionEnter(Collision other)
     {
         CountLostVegetables();
-        _currentHealth -= CountLostVeg;
+        _currentHealth -= 1;
         _hbscript.UpdateHealthbar(_maxHealth, _currentHealth);
+
 
 
 
