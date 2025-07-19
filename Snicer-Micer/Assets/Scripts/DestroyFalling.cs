@@ -7,9 +7,14 @@ public class DestroyFalling : MonoBehaviour
     public int CountLostVegTotal;
     public int _maxHealth = 10;
     public int _currentHealth;
+    public int _LevelHealth = 10;
+
+    public bool isDead;
 
     [SerializeField] private HealthBarScript _hbscript;
-    
+
+    public GameManager _gamemanager;
+
 
     void Start()
     {
@@ -22,7 +27,13 @@ public class DestroyFalling : MonoBehaviour
     {
         Debug.Log(CountLostVeg);
         
-        
+
+        if (CountLostVeg >= _LevelHealth && !isDead)
+        {
+            isDead = true;
+            _gamemanager.gameOver();
+        }
+
     }
 
 
@@ -41,5 +52,10 @@ public class DestroyFalling : MonoBehaviour
     public void CountLostVegetables()
     {
         CountLostVeg += 1;
+    }
+
+    public void lose()
+    {
+        
     }
 }

@@ -160,21 +160,7 @@ public class VegCollider : MonoBehaviour
         TotalSliced += CarrotCounter + PotatoCounter + AvocadoCounter;
     }
 
-    private void SpawnDestroyParticles()
-    {
-        if (tag == "Carrot")
-        {
-            _DamageParticleSystem = Instantiate(_DestroyParticlesCarrot, transform.position, Quaternion.identity);
-        }
-        if (tag == "Potato")
-        {
-            _DamageParticleSystem = Instantiate(_DestroyParticlesPotato, transform.position, Quaternion.identity);
-        }
-        if (tag == "Carrot")
-        {
-            _DamageParticleSystem = Instantiate(_DestroyParticlesAvocado, transform.position, Quaternion.identity);
-        }
-    }      
+        
 
 
 }
