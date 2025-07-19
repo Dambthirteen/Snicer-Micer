@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class SoundEffects : MonoBehaviour
 {
@@ -7,7 +8,11 @@ public class SoundEffects : MonoBehaviour
     [SerializeField] AudioSource MusicSource;
     [SerializeField] AudioSource SFXSound;
     [SerializeField] AudioSource SFXSoundFalling;
+    [SerializeField] AudioSource Backroundmusic;
 
+
+    [Header("Volume")]
+    [SerializeField] float VolumeChange = 50f;
 
     [Header("Audio Clips")]
     public AudioClip backround;
@@ -16,8 +21,10 @@ public class SoundEffects : MonoBehaviour
 
     void Start()
     {
-        MusicSource.clip = backround;
-        MusicSource.Play();
+        
+
+        PlayBackround();
+
     }
 
     void Update()
@@ -31,6 +38,11 @@ public class SoundEffects : MonoBehaviour
     void PlaySlice()
     {
         SFXSound.Play();
+    }
+
+    void PlayBackround()
+    {
+        Backroundmusic.Play();
     }
 
 }

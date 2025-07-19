@@ -38,9 +38,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Exponent: 1.21
-    - _Intensity: 9.54
+    - _Intensity: 3.75
     - _Multiplier: 0.25
-    - _Radius: 3.46
+    - _Radius: 2.95
     - _Sharpness: 0.053
     m_Colors: []
   m_BuildTextureStacks: []
