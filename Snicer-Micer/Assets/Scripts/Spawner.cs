@@ -34,15 +34,15 @@ public class Spawner : MonoBehaviour
 
             if (chance < 32)
             {
-                Instantiate(gm[0], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(45, 0, 0)));
+                Instantiate(gm[0], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(Random.Range(45, -45), Random.Range(45, -45), Random.Range(45, -45))));
             }
             else if (chance > 33 && chance < 66)
             {
-                Instantiate(gm[1], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(45, 0, 0)));
+                Instantiate(gm[1], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(Random.Range(45, -45), Random.Range(45, -45), Random.Range(45, -45))));
             }
             else
             {
-                Instantiate(gm[2], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(45, 0, 0)));
+                Instantiate(gm[2], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(Random.Range(45, -45), Random.Range(45, -45), Random.Range(45, -45))));
             }
 
             timer = 0.9f;
