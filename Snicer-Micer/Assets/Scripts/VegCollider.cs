@@ -13,6 +13,7 @@ public class VegCollider : MonoBehaviour
     int CarrotCounter;
     int PotatoCounter;
     int AvocadoCounter;
+    [SerializeField] float _DestroyTimeOffset;
     [SerializeField] float _FracturedSpawn = 0.2f;
     
     //Counter UI
@@ -81,7 +82,7 @@ public class VegCollider : MonoBehaviour
         {
             
 
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, _DestroyTimeOffset);
 
             SpawnVegetables();
             UICounter();

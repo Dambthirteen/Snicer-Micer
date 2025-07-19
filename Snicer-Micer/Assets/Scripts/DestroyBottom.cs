@@ -18,7 +18,7 @@ public class DestroyBottom : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         Debug.Log("Penis");
-        Destroy(other.gameObject, 1);
+        Destroy(other.gameObject, 5f);
     }
     
 }

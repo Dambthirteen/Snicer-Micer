@@ -8,14 +8,20 @@ public class Spawner : MonoBehaviour
     public float RandX1;
     public float RandX2;
 
+    public Transform from;
+    public Transform to;
+
     void Start()
     {
+        transform.rotation = Random.rotationUniform;
         
     }
 
 
     void Update()
     {
+        
+        
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -40,7 +46,7 @@ public class Spawner : MonoBehaviour
             }
 
             timer = 0.9f;
-            
+
         }
         
     }
