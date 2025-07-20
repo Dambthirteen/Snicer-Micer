@@ -1927,8 +1927,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slicer: {fileID: 1006225276}
-  _MovementSpeed: 8
+  _MovementSpeed: 7
+  _Sprintspeed: 10
   _AudioSource: {fileID: 1006225283}
+  explosionShakeData: {fileID: 11400000, guid: 5fc68b1b7a1fe714883c827e3846d582, type: 2}
 --- !u!82 &1006225283
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1942,7 +1944,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6068ed7c5589b0045b37348288f15760, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.528
+  m_Volume: 0.424
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2416,6 +2418,7 @@ GameObject:
   - component: {fileID: 1165178606}
   - component: {fileID: 1165178605}
   - component: {fileID: 1165178608}
+  - component: {fileID: 1165178609}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2545,6 +2548,23 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1165178609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165178604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeTechnique: 0
+  _makeDefaultOnEnable: 1
+  _limitMagnitude: 0
+  _positionalMagnitudeLimit: 10
+  _rotationalMagnitudeLimit: 3
 --- !u!1 &1241816846
 GameObject:
   m_ObjectHideFlags: 0
