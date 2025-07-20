@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4319126037719746351}
   - component: {fileID: 7103137068785971379}
   - component: {fileID: 1178749127669181261}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System Dust Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
