@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
                 Instantiate(gm[2], new Vector3(pos_x, RandHeight, 0f), Quaternion.Euler(new Vector3(Random.Range(-45, 90), Random.Range(0, 45), Random.Range(45, -45))));
             }
 
-            timer = 0.9f;
+            timer = Random.Range(0.7f, 0.9f);
 
         }
         
