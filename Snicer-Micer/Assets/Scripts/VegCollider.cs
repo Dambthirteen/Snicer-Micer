@@ -39,6 +39,8 @@ public class VegCollider : MonoBehaviour
     //Sounds
     AudioSource _audioSource;
     [SerializeField] AudioSource _ScoreSound;
+    int LoopInt = 1;
+    bool AddLoop;
 
     //Particles
     [SerializeField] private ParticleSystem _DestroyParticlesCarrot;
@@ -64,6 +66,8 @@ public class VegCollider : MonoBehaviour
         _Fuenfzwanzig.enabled = false;
         _Fuenfzig.enabled = false;
         _Hundert.enabled = false;
+        AddLoop = false;
+       
     }
 
 
@@ -75,8 +79,6 @@ public class VegCollider : MonoBehaviour
         _TotalSliced.text = TotalSliced.ToString();
         _Score.text = TotalSliced.ToString();
         SliceKey = KeyCode.Space;
-        
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -158,6 +160,12 @@ public class VegCollider : MonoBehaviour
         _audioSource.Play();
     }
 
+    private void PlayScoreSound()
+    {
+        _ScoreSound.Play();
+        
+    }
+
     private void SpawnVegetables()
     {
         for (int i = 0; i < PotatoCounter; i++)
@@ -190,7 +198,8 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 10 && TotalSliced < 16)
         {
             _Zehn.enabled = true;
-            _ScoreSound.Play();
+            
+            
         }
         else
         {
@@ -200,7 +209,8 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 25 && TotalSliced < 31)
         {
             _Fuenfzwanzig.enabled = true;
-            _ScoreSound.Play();
+            
+            
         }
         else
         {
@@ -210,7 +220,8 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 50 && TotalSliced < 56)
         {
             _Fuenfzig.enabled = true;
-            _ScoreSound.Play();
+            
+            
         }
         else
         {
@@ -220,7 +231,8 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 100 && TotalSliced < 106)
         {
             _Hundert.enabled = true;
-            _ScoreSound.Play();
+            
+            
         }
         else
         {
