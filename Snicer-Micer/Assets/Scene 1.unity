@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Slicer: {fileID: 1006225276}
   _MovementSpeed: 7
-  _Sprintspeed: 10
+  _Sprintspeed: 9
   _AudioSource: {fileID: 1006225283}
   explosionShakeData: {fileID: 11400000, guid: 5fc68b1b7a1fe714883c827e3846d582, type: 2}
 --- !u!82 &1006225283
@@ -4444,7 +4444,7 @@ GameObject:
   - component: {fileID: 1701461346}
   - component: {fileID: 1701461345}
   - component: {fileID: 1701461344}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Left Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4460,8 +4460,8 @@ Transform:
   m_GameObject: {fileID: 1701461342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.3974, y: -0.277, z: 0.0066}
-  m_LocalScale: {x: 1.2535969, y: 0.123355135, z: 1.6392641}
+  m_LocalPosition: {x: -0.3955, y: -0.277, z: 0.0066}
+  m_LocalScale: {x: 1.2535969, y: 0.11942675, z: 1.6392641}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1006225281}
@@ -4479,7 +4479,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -4688,7 +4688,7 @@ GameObject:
   - component: {fileID: 1766996557}
   - component: {fileID: 1766996556}
   - component: {fileID: 1766996555}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Right Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,8 +4704,8 @@ Transform:
   m_GameObject: {fileID: 1766996553}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.401, y: -0.2405, z: -0.0356}
-  m_LocalScale: {x: 1.1387836, y: 0.12389303, z: 1.6695913}
+  m_LocalPosition: {x: 0.4028, y: -0.2405, z: -0.0356}
+  m_LocalScale: {x: 1.1387836, y: 0.12752235, z: 1.6695913}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1006225281}
@@ -4723,7 +4723,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

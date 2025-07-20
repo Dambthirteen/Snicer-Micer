@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8078288677263639027}
   - component: {fileID: 2267661613887816636}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Carrot_sliced
   m_TagString: Carrot
   m_Icon: {fileID: 0}

@@ -554,7 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8849231258568304745}
   - component: {fileID: 8658453960776758815}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Avocado_sliced
   m_TagString: Avocado
   m_Icon: {fileID: 0}

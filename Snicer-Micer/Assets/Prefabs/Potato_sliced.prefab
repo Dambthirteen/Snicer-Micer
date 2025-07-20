@@ -417,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4341262813112314797}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Potato_sliced
   m_TagString: Potato
   m_Icon: {fileID: 0}
