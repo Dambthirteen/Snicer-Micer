@@ -16,6 +16,7 @@ public class DestroyFalling : MonoBehaviour
 
     public GameManager _gamemanager;
     public AudioSource _audiosource;
+    
 
     [SerializeField] GameObject SlicerDestroy;
 
@@ -36,6 +37,7 @@ public class DestroyFalling : MonoBehaviour
         {
             Destroy(SlicerDestroy);
             _gamemanager.gameOver();
+            
         }
         
 

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
     public GameObject ESCMenu;
+    public AudioSource GameOverSound;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     public void gameOver()
     {
         gameOverUI.SetActive(true);
+        GameOverSound.Play();
     }
 
     public void ESCMenuStart()
