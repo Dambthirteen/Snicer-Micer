@@ -21,11 +21,17 @@ public class VegCollider : MonoBehaviour
     int PotatoCounterMax;
     int AvocadoCounterMax;
     int TotalSliced;
+    float targettimer = 5;
     [SerializeField] TextMeshProUGUI _ScoreCarrot;
     [SerializeField] TextMeshProUGUI _ScorePotato;
     [SerializeField] TextMeshProUGUI _ScoreAvocado;
     [SerializeField] TextMeshProUGUI _TotalSliced;
     [SerializeField] TextMeshProUGUI _Score;
+
+    [SerializeField] TextMeshProUGUI _Zehn;
+    [SerializeField] TextMeshProUGUI _Fuenfzwanzig;
+    [SerializeField] TextMeshProUGUI _Fuenfzig;
+    [SerializeField] TextMeshProUGUI _Hundert;
 
     //Keys
     public KeyCode SliceKey = KeyCode.Space;
@@ -53,6 +59,10 @@ public class VegCollider : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _Zehn.enabled = false;
+        _Fuenfzwanzig.enabled = false;
+        _Fuenfzig.enabled = false;
+        _Hundert.enabled = false;
     }
 
 
@@ -64,6 +74,7 @@ public class VegCollider : MonoBehaviour
         _TotalSliced.text = TotalSliced.ToString();
         _Score.text = TotalSliced.ToString();
         SliceKey = KeyCode.Space;
+        
 
     }
 
@@ -75,11 +86,11 @@ public class VegCollider : MonoBehaviour
         {
             CarrotCounter += 1;
         }
-        
+
         if (other.gameObject.CompareTag("Potato"))
-            {
-                PotatoCounter += 1;
-            }
+        {
+            PotatoCounter += 1;
+        }
 
         if (other.gameObject.CompareTag("Avocado"))
         {
@@ -87,7 +98,7 @@ public class VegCollider : MonoBehaviour
         }
         ///Instantiate(GmVeg[1], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
 
-    
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -112,6 +123,10 @@ public class VegCollider : MonoBehaviour
 
             SpawnVegetables();
             UICounter();
+            Debug.Log(TotalSliced);
+            UITextScore();
+            
+            
 
             CarrotCounter = 0;
             PotatoCounter = 0;
@@ -167,6 +182,45 @@ public class VegCollider : MonoBehaviour
         PotatoCounterMax += PotatoCounter;
         AvocadoCounterMax += AvocadoCounter;
         TotalSliced += CarrotCounter + PotatoCounter + AvocadoCounter;
+    }
+
+    private void UITextScore()
+    {
+        if (TotalSliced >= 10 && TotalSliced < 16)
+        {
+            _Zehn.enabled = true;
+        }
+        else
+        {
+            _Zehn.enabled = false;
+        }
+
+        if (TotalSliced >= 25 && TotalSliced < 31)
+        {
+            _Fuenfzwanzig.enabled = true;
+        }
+        else
+        {
+            _Fuenfzwanzig.enabled = false;
+        }
+
+        if (TotalSliced >= 50 && TotalSliced < 56)
+        {
+            _Fuenfzig.enabled = true;
+        }
+        else
+        {
+            _Fuenfzig.enabled = false;
+        }
+
+        if (TotalSliced >= 100 && TotalSliced < 106)
+        {
+            _Hundert.enabled = true;
+        }
+        else
+        {
+            _Hundert.enabled = false;
+        }
     }
 
     
