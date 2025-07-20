@@ -17,6 +17,8 @@ public class DestroyFalling : MonoBehaviour
     public GameManager _gamemanager;
     public AudioSource _audiosource;
 
+    [SerializeField] GameObject SlicerDestroy;
+
 
     void Start()
     {
@@ -28,13 +30,15 @@ public class DestroyFalling : MonoBehaviour
     void Update()
     {
         Debug.Log(CountLostVeg);
-        
 
-        if (CountLostVeg >= _LevelHealth && !isDead)
+
+        if (CountLostVeg >= _LevelHealth)
         {
-            isDead = true;
+            Destroy(SlicerDestroy);
             _gamemanager.gameOver();
         }
+        
+
 
     }
 
