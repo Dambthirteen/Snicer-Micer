@@ -38,6 +38,11 @@ public class VegCollider : MonoBehaviour
     [SerializeField] private ParticleSystem _DestroyParticlesAvocado;
     private ParticleSystem _DamageParticleSystem;
 
+    //Streak
+    public int _StreakSliced10 = 10;
+    public int _StreakSliceCheck;
+    DestroyFalling _destroyfalling;
+
     void Awake()
     {
 
@@ -68,17 +73,19 @@ public class VegCollider : MonoBehaviour
         {
             CarrotCounter += 1;
         }
-
+        
         if (other.gameObject.CompareTag("Potato"))
-        {
-            PotatoCounter += 1;
-        }
+            {
+                PotatoCounter += 1;
+            }
 
         if (other.gameObject.CompareTag("Avocado"))
         {
             AvocadoCounter += 1;
         }
         ///Instantiate(GmVeg[1], new Vector3(transform.position.x, -1f, transform.position.z), quaternion.identity);
+
+    
     }
 
     private void OnTriggerStay(Collider other)
@@ -98,9 +105,9 @@ public class VegCollider : MonoBehaviour
             {
                 _DamageParticleSystem = Instantiate(_DestroyParticlesAvocado, transform.position, Quaternion.identity);
             }
-            
+
             Destroy(other.gameObject, _DestroyTimeOffset);
-            
+
             SpawnVegetables();
             UICounter();
 
@@ -159,6 +166,9 @@ public class VegCollider : MonoBehaviour
         AvocadoCounterMax += AvocadoCounter;
         TotalSliced += CarrotCounter + PotatoCounter + AvocadoCounter;
     }
+
+    
+    
 
         
 

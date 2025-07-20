@@ -10,6 +10,7 @@ public class DestroyFalling : MonoBehaviour
     public int _LevelHealth = 10;
 
     public bool isDead;
+    public bool NoFall = false;
 
     [SerializeField] private HealthBarScript _hbscript;
 
@@ -48,6 +49,7 @@ public class DestroyFalling : MonoBehaviour
         _audiosource.pitch = Random.Range(1f, 1.5f);
         _audiosource.Play();
         Destroy(other.gameObject);
+        NoFall = true;
     }
 
     public void CountLostVegetables()

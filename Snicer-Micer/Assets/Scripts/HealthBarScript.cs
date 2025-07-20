@@ -9,6 +9,7 @@ public class HealthBarScript : MonoBehaviour
     
 
     [SerializeField] Image _healthBarSprite;
+    
 
 
     void Start()
@@ -25,6 +26,8 @@ public class HealthBarScript : MonoBehaviour
 
     public void UpdateHealthbar(float _maxHealth, float _currentHealth)
     {
+
         _healthBarSprite.fillAmount = _currentHealth / _maxHealth;
+        
     }
 }
