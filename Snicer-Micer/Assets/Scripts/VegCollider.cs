@@ -25,6 +25,7 @@ public class VegCollider : MonoBehaviour
     [SerializeField] TextMeshProUGUI _ScorePotato;
     [SerializeField] TextMeshProUGUI _ScoreAvocado;
     [SerializeField] TextMeshProUGUI _TotalSliced;
+    [SerializeField] TextMeshProUGUI _Score;
 
     //Keys
     public KeyCode SliceKey = KeyCode.Space;
@@ -61,6 +62,7 @@ public class VegCollider : MonoBehaviour
         _ScorePotato.text = PotatoCounterMax.ToString();
         _ScoreAvocado.text = AvocadoCounterMax.ToString();
         _TotalSliced.text = TotalSliced.ToString();
+        _Score.text = TotalSliced.ToString();
         SliceKey = KeyCode.Space;
 
     }
