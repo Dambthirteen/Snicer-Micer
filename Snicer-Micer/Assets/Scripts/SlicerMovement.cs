@@ -13,6 +13,7 @@ public class SlicerMovement : MonoBehaviour
     Rigidbody _rb;
     [SerializeField] GameObject Slicer;
     public float _MovementSpeed;
+    public float _Sprintspeed;
     Vector3 HorizontalMovement;
     Vector3 PreviousPosition;
 
@@ -38,6 +39,12 @@ public class SlicerMovement : MonoBehaviour
     {
         HorizontalMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
         transform.Translate(HorizontalMovement * _MovementSpeed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Debug.Log("Sprint");
+            transform.Translate(HorizontalMovement * _Sprintspeed * Time.deltaTime);
+        }
     }
 
     public void MoveSound()
