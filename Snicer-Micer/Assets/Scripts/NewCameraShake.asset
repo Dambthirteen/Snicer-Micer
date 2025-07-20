@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scaledTime: 1
   _shakeCameras: 1
-  _shakeCanvases: 1
-  _shakeObjects: 1
+  _shakeCanvases: 0
+  _shakeObjects: 0
   _iterationPercent: 1
   _unlimitedDuration: 0
-  _totalDuration: 0.2
-  _fadeInDuration: 0.2
-  _fadeOutDuration: 0.2
+  _totalDuration: 0.1
+  _fadeInDuration: 0.1
+  _fadeOutDuration: 0.1
   _magnitude: 0.4
   _magnitudeNoise: 0.122
   _magnitudeCurve:

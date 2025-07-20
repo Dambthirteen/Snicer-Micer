@@ -18,7 +18,7 @@ public class AnimControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            SnicerAnim.Play("SliceAnimation");
+            SnicerAnim.Play("SliceAnimationtwo");
         }
        
     }
