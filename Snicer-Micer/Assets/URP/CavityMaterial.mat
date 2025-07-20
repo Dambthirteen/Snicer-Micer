@@ -37,11 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Exponent: 1.21
-    - _Intensity: 3.75
-    - _Multiplier: 0.25
-    - _Radius: 2.95
-    - _Sharpness: 0.053
+    - _Exponent: 2.01
+    - _Intensity: 4.53
+    - _Multiplier: 0.48
+    - _Radius: 5
+    - _Sharpness: 0.445
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
