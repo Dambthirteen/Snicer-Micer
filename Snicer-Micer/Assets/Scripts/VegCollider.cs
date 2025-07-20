@@ -38,6 +38,7 @@ public class VegCollider : MonoBehaviour
 
     //Sounds
     AudioSource _audioSource;
+    [SerializeField] AudioSource _ScoreSound;
 
     //Particles
     [SerializeField] private ParticleSystem _DestroyParticlesCarrot;
@@ -189,6 +190,7 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 10 && TotalSliced < 16)
         {
             _Zehn.enabled = true;
+            _ScoreSound.Play();
         }
         else
         {
@@ -198,6 +200,7 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 25 && TotalSliced < 31)
         {
             _Fuenfzwanzig.enabled = true;
+            _ScoreSound.Play();
         }
         else
         {
@@ -207,6 +210,7 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 50 && TotalSliced < 56)
         {
             _Fuenfzig.enabled = true;
+            _ScoreSound.Play();
         }
         else
         {
@@ -216,6 +220,7 @@ public class VegCollider : MonoBehaviour
         if (TotalSliced >= 100 && TotalSliced < 106)
         {
             _Hundert.enabled = true;
+            _ScoreSound.Play();
         }
         else
         {
